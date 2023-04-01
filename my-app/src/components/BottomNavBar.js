@@ -1,11 +1,21 @@
 import React from 'react';
 
+import {
+ 
+  HomeIcon,
+  InboxIcon,
+  UsersIcon,
+  UserCircleIcon,
+  
+  CogIcon,
+
+} from '@heroicons/react/24/outline';
 function BottomNavBar({ activeTab, onChangeTab }) {
   const tabs = [
-    { id: 'home', label: 'Home', icon: 'home' },
-{ id: 'category', label: 'Category', icon: 'tag' },
-{ id: 'cart', label: 'Cart', icon: 'shopping-cart' },
-{ id: 'profile', label: 'Profile', icon: 'user' },
+    { id: 'home', label: 'Home', icon: HomeIcon },
+    { id: 'profile', label: 'Profile', icon:  UsersIcon },
+{ id: 'setting', label: 'setting', icon:  CogIcon},
+
   ];
 
   return (
@@ -20,6 +30,7 @@ function BottomNavBar({ activeTab, onChangeTab }) {
             onClick={() => onChangeTab(tab.id)}
           >
             <span className="mdi mdi-24px mdi-home-outline" />
+            <tab.icon className="h-5 w-5" />
             <span className="text-xs">{tab.label}</span>
           </li>
         ))}
