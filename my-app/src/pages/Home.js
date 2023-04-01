@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import AuthModal from "../components/AuthModal";
 import { useState } from "react";
+import TinderCard from 'react-tinder-card';
 
 function Home() {
 
@@ -11,6 +12,14 @@ function Home() {
   function handleClick() {
     console.log("clicked");
     setShowModal(true)
+  }
+
+  const onSwipe = (direction) => {
+    console.log('You swiped: ' + direction)
+  }
+  
+  const onCardLeftScreen = (myIdentifier) => {
+    console.log(myIdentifier + ' left the screen')
   }
 
   return (
@@ -27,6 +36,7 @@ function Home() {
         )}
 
       </div>
+      
     </div>
   );
 }
