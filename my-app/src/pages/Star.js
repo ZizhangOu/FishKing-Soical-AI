@@ -1,7 +1,7 @@
 import { StarIcon } from '@heroicons/react/20/solid';
 
 
-function Star() {
+export function Star() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="grid grid-cols-2 gap-4">

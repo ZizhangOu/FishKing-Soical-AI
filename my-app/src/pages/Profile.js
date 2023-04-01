@@ -1,16 +1,13 @@
 import React from "react";
 
-import Navbar from "../components/AutuNavbar";
-
-
 export default function Profile() {
   return (
     <>
-      <Navbar transparent />
+ 
       <main className="profile-page">
         <section className="relative block h-500-px">
           <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
+            className=" top-1 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
