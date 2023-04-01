@@ -1,13 +1,18 @@
 import React from "react";
 
+import Navbar from "../components/AutuNavbar";
+import BottomNavBar from "../components/BottomNavBar";
+
+
 export default function Profile() {
   return (
     <>
- 
+      <Navbar transparent />
       <main className="profile-page">
-        <section className="relative block h-500-px">
+      <section className="relative block" style={{ height: "500px" }}>
+
           <div
-            className=" top-1 w-full h-full bg-center bg-cover"
+            className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
@@ -40,15 +45,16 @@ export default function Profile() {
         </section>
         <section className="relative py-16 bg-blueGray-200">
           <div className="container mx-auto px-4">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg ">
               <div className="px-6">
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                     <div className="relative">
                       <img
                         alt="..."
-                        src="/img/team-2-800x800.jpg"
-                        className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
+                        src="https://i.imgur.com/Q9WPlWA.jpg"
+                        className="shadow-xl rounded-full h-auto align-middle border-none mt-20 lg:mt-16 max-w-150-px z-10"
+                        
                       />
                     </div>
                   </div>
@@ -133,7 +139,7 @@ export default function Profile() {
           </div>
         </section>
       </main>
-    
+    <BottomNavBar />
     </>
   );
 }

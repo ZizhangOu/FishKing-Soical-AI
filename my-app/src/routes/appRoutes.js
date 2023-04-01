@@ -3,7 +3,7 @@ import {Register} from '../pages/Register';
 
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
-import {Star} from '../pages/Star';
+import Star from '../pages/Star';
 import BottomNavBar from '../components/BottomNavBar';
 import { Navigate } from 'react-router-dom';
 
