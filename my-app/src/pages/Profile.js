@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "components/Navbars/AuthNavbar.js";
+import Navbar from "../components/AutuNavbar";
 
 
 export default function Profile() {
