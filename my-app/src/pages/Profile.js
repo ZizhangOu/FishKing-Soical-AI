@@ -1,6 +1,7 @@
 import React from "react";
 
 import Navbar from "../components/AutuNavbar";
+import BottomNavBar from "../components/BottomNavBar";
 
 
 export default function Profile() {
@@ -138,7 +139,7 @@ export default function Profile() {
           </div>
         </section>
       </main>
-    
+    <BottomNavBar />
     </>
   );
 }
