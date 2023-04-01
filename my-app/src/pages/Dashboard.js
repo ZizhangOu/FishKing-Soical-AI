@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BottomNav from './components/BottomNavBar';
+import BottomNav from '../components/BottomNavBar';
 
 
 function Dashboard() {
