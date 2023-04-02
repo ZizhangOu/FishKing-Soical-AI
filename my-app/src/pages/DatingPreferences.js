@@ -1,27 +1,26 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
-
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function DatingPreferences() {
   const [agreed, setAgreed] = useState(false)
+  const {
+    register,
+    handleSubmit,
+   } = useForm({   
+  });
+  const navigate = useNavigate();
+ const onSubmit = () => {
+  handleSubmit(onSubmit);
+  navigate('/Recommend');
+
+ }
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -43,7 +42,8 @@ export default function Example() {
         Please fill in the information of the person you want to date and let Ai help you to match quickly
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+    
+      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={(onSubmit)} >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -147,10 +147,10 @@ export default function Example() {
         </div>
         <div className="mt-10">
           <button
-            type="submit"
+            type="submit" href="/Recommend"
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Let's talk
+           Show me the matches
           </button>
         </div>
       </form>
