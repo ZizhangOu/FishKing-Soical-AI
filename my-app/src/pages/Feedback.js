@@ -3,6 +3,7 @@
 import {DateRatingRadarChart} from "../components/Cards/DateRatingRadarChart";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RatingTable } from "../components/Cards/RatingTable";
+import BottomNavBar from "../components/BottomNavBar";
 function Facebook() {
 
   return (
@@ -13,6 +14,7 @@ function Facebook() {
 
 <DateRatingRadarChart/>
 <RatingTable/>
+<BottomNavBar/>
         </div>
         </div>
         </div>
