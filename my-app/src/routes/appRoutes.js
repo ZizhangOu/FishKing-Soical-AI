@@ -10,6 +10,9 @@ import DatingPreferences from '../pages/DatingPreferences';
 
 import { Navigate } from 'react-router-dom';
 import Star from '../pages/Star';
+import Chat from '../pages/Chat';
+import Feedback from '../pages/Feedback';
+import Chat1 from '../pages/Chat1';
 
 export const appRoutes = [
   { path: '/signup', element: <Register /> },
@@ -19,6 +22,9 @@ export const appRoutes = [
   { path: '/Recommend', element: <Recommend /> },
   { path: '/star', element: <Star/> },
   { path: '/DatingPreferences', element: <DatingPreferences/>},
+  {path: '/chat', element: <Chat/>},
+  {path: '/Feedback', element: <Feedback/>},
+  {path: '/Chat1', element: <Chat1/>},
 
 
   {
