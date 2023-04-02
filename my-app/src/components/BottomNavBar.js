@@ -14,7 +14,8 @@ function BottomNavBar({  }) {
   const tabs = [
     { id: 'home', label: 'Home', icon: HomeIcon,href:"/"}, 
     { id: 'profile', label: 'Profile', icon:  UsersIcon ,href:"profile"}, 
-{ id: 'setting', label: 'setting', icon:  CogIcon,href:"/setting"},
+{ id: 'setting', label: 'Setting', icon:  CogIcon,href:"/setting"},
+{id: 'recommend', label: 'Recommend', icon:  InboxIcon,href:"/recommend"},
 {id: 'chat', label: 'chat', icon:  InboxIcon,href:"/chat"}
 
   ];

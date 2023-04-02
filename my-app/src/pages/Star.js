@@ -1,47 +1,32 @@
-
 import React, { useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { CardGauge2 } from '../components/Cards/CardScore2';
 
+import BottomNavBar from '../components/BottomNavBar';
 function Star() {
   const labels = ['Appearance', 'Personality', 'Interests', 'Occupation'];
-  const initialImages = [
-    "https://i.imgur.com/MWAcQRM.jpeg",
-    "https://i.imgur.com/Lnt9K7l.jpeg",
-    "https://i.imgur.com/Q9WPlWA.jpeg",
-    "https://i.imgur.com/Gg6BpGn.jpeg",
-    "https://i.imgur.com/clq9lGO.jpeg",
-    "https://i.imgur.com/jJkz9VB_d.webp?maxwidth=760&fidelity=grand",
-    "https://i.imgur.com/73QMhC2_d.webp?maxwidth=760&fidelity=grand",
-    "	https://i.imgur.com/Dc7jM9T_d.webp?maxwidth=760&fidelity=grand",
-  ];
-
-  const [images, setImages] = useState(initialImages);
-
-  const fetchMoreData = () => {
-    // Add more images to the list after a short delay to simulate data fetching
-    setTimeout(() => {
-      setImages((prevImages) => [...prevImages, ...initialImages]);
-    }, 1500);
-  };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <InfiniteScroll
-        dataLength={images.length}
-        next={fetchMoreData}
-        hasMore={true}
-        loader={<h4>Loading...</h4>}
-      >
-        <div className="grid grid-cols-2 gap-4">
-          {images.map((src, index) => (
-            <div key={index} className="relative rounded-2xl overflow-hidden">
-              <img src={src} alt={`Image ${index + 1}`} className="w-full h-full object-cover" />
-              <div className="absolute bottom-0 left-0 p-2">
-                <div className="flex flex-col">
+    <div className="flex flex-col  h-screen bg-gray-100">
+      <div className="w-full bg-white p-4 flex  justify-between border-b border-gray-200">
+        <div className="flex items-center space-x-4">
+          <img className="w-12 h-12 rounded-full" src='' alt="Profile" />
+          <div>
+            <div className="font-bold text-lg">Lucas Lee</div>
+            <div className="text-sm text-gray-500">23 | New York</div>
+          </div>
+        </div>
+        <button className="text-blue-500 font-semibold">Edit</button>
+      </div>
+      <div className="w-full bg-white p-4 flex flex-col  border-b border-gray-200">
+       
+      
+
+        <div className="flex flex-col justify-center items-center mt-8 mb-10" >
                   {labels.map((text, labelIndex) => (
                     <div key={labelIndex} className="flex items-center mt-1">
-                      <p className="text-white font-semibold mr-2">{text}</p>
+                      <p className="text-purle font-semibold mr-2">{text}</p>
                       {[...Array(5)].map((_, starIndex) => (
                         <StarIcon
                           key={starIndex}
@@ -53,13 +38,13 @@ function Star() {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </InfiniteScroll>
+                < CardGauge2   />
+                <BottomNavBar/>
+      </div>
     </div>
+    
   );
-}
+};
+    
 
 export default Star;
