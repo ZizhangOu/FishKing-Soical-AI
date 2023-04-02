@@ -24,7 +24,7 @@ export default function Home() {
               
               <img
                 className="h-8 w-auto"
-                src='../cyberfishking-logo-color.png'
+                src='.../public/cyberfishking-logo-color.png'
                 alt=""
               />
               
