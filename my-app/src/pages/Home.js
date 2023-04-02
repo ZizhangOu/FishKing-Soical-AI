@@ -25,6 +25,7 @@ export default function Home() {
               <img
                 className="h-8 w-auto"
                 src='.../public/cyberfishking-logo-color.png'
+             
                 alt=""
               />
               
@@ -133,7 +134,7 @@ export default function Home() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="/login"
                 className="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started

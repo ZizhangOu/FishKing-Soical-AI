@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import BottomNavBar from '../components/BottomNavBar';
 
 function Recommend() {
   const labels = ['Appearance', 'Personality', 'Interests', 'Occupation'];
@@ -33,6 +34,7 @@ function Recommend() {
         hasMore={true}
         loader={<h4>Loading...</h4>}
       >
+        <a href="/star">
         <div className="grid grid-cols-2 gap-4">
           {images.map((src, index) => (
             <div key={index} className="relative rounded-2xl overflow-hidden">
@@ -57,7 +59,9 @@ function Recommend() {
             </div>
           ))}
         </div>
+        </a>
       </InfiniteScroll>
+      <BottomNavBar/>
     </div>
   );
 }

@@ -6,16 +6,17 @@ import {
   InboxIcon,
   UsersIcon,
   UserCircleIcon,
-  
-  CogIcon,
+  StarIcon,
+ 
 
 } from '@heroicons/react/24/outline';
 function BottomNavBar({  }) {
   const tabs = [
     { id: 'home', label: 'Home', icon: HomeIcon,href:"/"}, 
     { id: 'profile', label: 'Profile', icon:  UsersIcon ,href:"profile"}, 
-{ id: 'setting', label: 'Setting', icon:  CogIcon,href:"/setting"},
+
 {id: 'recommend', label: 'Recommend', icon:  InboxIcon,href:"/recommend"},
+{ id: 'star', label: 'Star', icon:  StarIcon,href:"/star"},
 {id: 'chat', label: 'chat', icon:  InboxIcon,href:"/chat"}
 
   ];
